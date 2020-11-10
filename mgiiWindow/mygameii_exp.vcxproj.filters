@@ -7,6 +7,9 @@
     <Filter Include="Header Files">
       <UniqueIdentifier>{954a8f61-1c3e-419b-baca-c5e2b83c689a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Debugging">
+      <UniqueIdentifier>{6b27c214-7d3a-419b-bbcd-03e425849647}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -30,6 +33,10 @@
     <ClInclude Include="D3D12mgiiWindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\GameCode.h" />
+    <ClInclude Include="Logger.h">
+      <Filter>Debugging</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -49,6 +56,9 @@
     </ClCompile>
     <ClCompile Include="D3D12mgiiWindow.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Debugging</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

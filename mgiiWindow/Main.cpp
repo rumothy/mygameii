@@ -9,12 +9,14 @@
 //
 //*********************************************************
 
+#include "GameCode.h"
 #include "stdafx.h"
 #include "D3D12mgiiWindow.h"
 #include "rapidxml.hpp"
 
 #include <iostream>
 #include <fstream>
+#include "Logger.h"
 
 using namespace rapidxml;
 using namespace std;
@@ -36,7 +38,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
     //char* text = "<a></a>";
     //doc.parse<0>(text);
 
-
+    Logger::Init("logging.xml");
 
     std::ifstream ifs("C:\\dev\\game\\mygameii\\mgiiWindow\\bin\\x64\\Debug\\file.xml", std::ios::in);
     if (!ifs.is_open()) {
@@ -45,8 +47,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
 
     std::string xml_str;
     xml_str.assign(std::istreambuf_iterator<char>(ifs), std::istreambuf_iterator<char>());
-
-    //std::string xml_str = "<a>hi</a>";
 
     xml_document<> doc;
     try {
