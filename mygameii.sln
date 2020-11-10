@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mygameii_exp", "mgiiWindow\mygameii_exp.vcxproj", "{23E282D0-E846-485C-B7A1-DA60F4BEA3D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23E282D0-E846-485C-B7A1-DA60F4BEA3D2}.Debug|x64.ActiveCfg = Debug|x64
+		{23E282D0-E846-485C-B7A1-DA60F4BEA3D2}.Debug|x64.Build.0 = Debug|x64
+		{23E282D0-E846-485C-B7A1-DA60F4BEA3D2}.Release|x64.ActiveCfg = Release|x64
+		{23E282D0-E846-485C-B7A1-DA60F4BEA3D2}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B9B4040-C383-4EDB-AA9E-50FC7963C524}
+	EndGlobalSection
+EndGlobal
