@@ -20,6 +20,18 @@
 #endif
 
 #include <windows.h>
+#include <list>
+#include <map>
+
+class GCC_noncopyable
+{
+private:
+	GCC_noncopyable(const GCC_noncopyable& x);
+	GCC_noncopyable& operator=(const GCC_noncopyable& x);
+public:
+	GCC_noncopyable() {};
+};
+
 
 #include <d3d12.h>
 #include <dxgi1_6.h>
@@ -30,3 +42,19 @@
 #include <string>
 #include <wrl.h>
 #include <shellapi.h>
+
+
+#if defined(_DEBUG)
+#	define GCC_NEW new(_NORMAL_BLOCK, __FILE__, __LINE__)
+#else
+#	define GCC_NEW new
+#endif
+
+
+#include "rapidxml.hpp"
+#include <iostream>
+#include <fstream>
+
+#include "Logger.h"
+
+using namespace rapidxml;

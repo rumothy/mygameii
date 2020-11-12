@@ -113,8 +113,9 @@
     </FxCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\GameCode.h" />
+    <ClInclude Include="CriticalSection.h" />
     <ClInclude Include="D3D12mgiiWindow.h" />
+    <ClInclude Include="GameCode.h" />
     <ClInclude Include="Logger.h" />
     <ClInclude Include="Win32Application.h" />
     <ClInclude Include="D3D12HelloWindow.h" />

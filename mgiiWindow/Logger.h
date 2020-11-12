@@ -26,4 +26,22 @@ namespace Logger
 		std::string s((str)); \
 		pErrorMessenger->Show(s, true, __FUNCTION__, __FILE__, __LINE__); \
 	} \
-	while (0) \
+	while (0)\
+
+#if 1
+
+// Errors are bad and potentially fatal. They are presented as a dialog with Abort, Retry, and Ignore. Abort will 
+// break into the debugger, retry will continue the game, and ignore will continue the game and ignore every subsequent
+// call to this specific error. They are ignored completely in release mode.
+#define GCC_ERROR(str) \
+	do \
+	{ \
+		static Logger::ErrorMessenger* pErrorMessenger = GCC_NEW Logger::ErrorMessenger; \
+		std::string s((str)); \
+		pErrorMessenger->Show(s, false, __FUNCTION__, __FILE__, __LINE__); \
+	} \
+	while (0)\
+
+#else
+
+#endif

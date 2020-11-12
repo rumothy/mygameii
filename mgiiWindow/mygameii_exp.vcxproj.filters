@@ -10,6 +10,12 @@
     <Filter Include="Debugging">
       <UniqueIdentifier>{6b27c214-7d3a-419b-bbcd-03e425849647}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameCode">
+      <UniqueIdentifier>{98e5c297-4662-434f-b443-c7076e3e933c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Multicore">
+      <UniqueIdentifier>{bb959bee-efb6-436d-a354-99956a1149db}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -33,9 +39,14 @@
     <ClInclude Include="D3D12mgiiWindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\GameCode.h" />
     <ClInclude Include="Logger.h">
       <Filter>Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="GameCode.h">
+      <Filter>GameCode</Filter>
+    </ClInclude>
+    <ClInclude Include="CriticalSection.h">
+      <Filter>Multicore</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
