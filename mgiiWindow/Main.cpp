@@ -18,7 +18,7 @@
 using namespace std;
 
 _Use_decl_annotations_
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR lpCmdLine, int nCmdShow)
 {
     int tmpDbgFlag = _CrtSetDbgFlag(_CRTDBG_REPORT_FLAG);
     tmpDbgFlag |= _CRTDBG_LEAK_CHECK_DF;
@@ -27,7 +27,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
 
     Logger::Init("C:\\dev\\game\\mygameii\\mgiiWindow\\bin\\x64\\Debug\\Logging.xml");
 
-
+    g_pApp->m_Options.Init("C:\\dev\\game\\mygameii\\mgiiWindow\\bin\\x64\\Debug\\PlayerOptions.xml");
 
     D3D12mgiiWindow sample(1280, 720, L"D3D12 Hello Window");
 

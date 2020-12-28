@@ -16,6 +16,9 @@
     <Filter Include="Multicore">
       <UniqueIdentifier>{bb959bee-efb6-436d-a354-99956a1149db}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Mainloop">
+      <UniqueIdentifier>{23b08f31-e2f1-45fe-80b0-b4e8c4b0ec92}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -48,6 +51,9 @@
     <ClInclude Include="CriticalSection.h">
       <Filter>Multicore</Filter>
     </ClInclude>
+    <ClInclude Include="Initialization.h">
+      <Filter>Mainloop</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -70,6 +76,12 @@
     </ClCompile>
     <ClCompile Include="Logger.cpp">
       <Filter>Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="GameCode.cpp">
+      <Filter>GameCode</Filter>
+    </ClCompile>
+    <ClCompile Include="Initialization.cpp">
+      <Filter>Mainloop</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
