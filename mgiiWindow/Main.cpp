@@ -24,9 +24,12 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR lpCmdLine, int nCmdShow
     tmpDbgFlag |= _CRTDBG_LEAK_CHECK_DF;
     _CrtSetDbgFlag(tmpDbgFlag);
 
-
     Logger::Init("C:\\dev\\game\\mygameii\\mgiiWindow\\bin\\x64\\Debug\\Logging.xml");
 
+    // TEST: this does not belong here - just testing for now...
+    GameCodeApp();
+    //
+    
     g_pApp->m_Options.Init("C:\\dev\\game\\mygameii\\mgiiWindow\\bin\\x64\\Debug\\PlayerOptions.xml");
 
     D3D12mgiiWindow sample(1280, 720, L"D3D12 Hello Window");

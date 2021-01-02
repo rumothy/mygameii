@@ -5,6 +5,7 @@ class GameCodeApp
 {
 
 public:
+	GameCodeApp();
 	struct GameOptions m_Options;
 
 };

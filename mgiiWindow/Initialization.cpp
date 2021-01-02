@@ -3,6 +3,14 @@
 
 GameOptions::GameOptions()
 {
+	m_Renderer = "Direct3D 9";
+	m_pDoc = NULL;
+	m_ScreenSize = Point(1024, 768);
+}
+
+GameOptions::~GameOptions()
+{
+
 }
 
 void GameOptions::Init(const char* xmlFileName)
@@ -26,8 +34,33 @@ void GameOptions::Init(const char* xmlFileName)
 
 		if (pNode)
 		{
-			xml_attribute<>* rendererAttr = pNode->first_attribute("renderer");
+			xml_attribute<char>* rendererAttr = pNode->first_attribute("renderer");
 			std::string attribute = rendererAttr->value();
+			if (attribute != "Direct3D 9" && attribute != "Direct3D 11")
+			{
+				GCC_ASSERT(0 && "Bad Renderer setting in Graphics options.");
+			}
+			else
+			{
+				m_Renderer = attribute;
+			}
+
+			if (pNode->first_attribute("width"))
+			{
+				xml_attribute<char>* widthAttr = pNode->first_attribute("width");
+				std::string widthStr = widthAttr->value();
+				m_ScreenSize.x = atoi(widthStr.c_str());
+			}
+
+			if (pNode->first_attribute("height"))
+			{
+
+			}
+
+			if (pNode->first_attribute("runfullspeed"))
+			{
+
+			}
 		}
 
 	}
