@@ -27,7 +27,7 @@ class GCC_noncopyable
 {
 private:
 	GCC_noncopyable(const GCC_noncopyable& x);
-	GCC_noncopyable& operator=(const GCC_noncopyable& x);
+	//GCC_noncopyable& operator=(const GCC_noncopyable& x);
 public:
 	GCC_noncopyable() {};
 };
@@ -58,3 +58,13 @@ public:
 #include "Logger.h"
 
 using namespace rapidxml;
+
+
+
+
+
+
+
+// stdafx.cpp == GameCodeStd.cpp
+const int SCREEN_WIDTH = 800;
+const int SCREEN_HEIGHT = 600;
