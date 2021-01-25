@@ -16,6 +16,11 @@
 
 
 using namespace std;
+class TestGameCodeApp : public GameCodeApp
+{
+    TCHAR* VGetGameTitle() { return L"TestGame"; }
+};
+
 
 _Use_decl_annotations_
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR lpCmdLine, int nCmdShow)
@@ -27,7 +32,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR lpCmdLine, int nCmdShow
     Logger::Init("C:\\dev\\game\\mygameii\\mgiiWindow\\bin\\x64\\Debug\\Logging.xml");
 
     // TEST: this does not belong here - just testing for now...
-    GameCodeApp();
+    TestGameCodeApp();
     //
     
     g_pApp->m_Options.Init("C:\\dev\\game\\mygameii\\mgiiWindow\\bin\\x64\\Debug\\PlayerOptions.xml");
