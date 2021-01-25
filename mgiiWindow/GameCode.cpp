@@ -19,5 +19,7 @@ bool GameCodeApp::InitInstance(HINSTANCE hInstance, LPWSTR lpCmdLine, HWND hWnd,
 	if (!IsOnlyInstance(VGetGameTitle()))
 		return false;
 #endif
+	// We don't need a mouse cursor by default, let the game turn it on
+	SetCursor(NULL);
 	return TRUE;
 }
